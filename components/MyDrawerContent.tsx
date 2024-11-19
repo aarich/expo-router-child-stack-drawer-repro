@@ -4,7 +4,7 @@ import {
   DrawerItemList,
 } from "@react-navigation/drawer";
 
-import { useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { Button } from "react-native";
 import { Text } from "./Themed";
 import Buttons from "./Buttons";
@@ -22,7 +22,12 @@ export function MyDrawerContent({
 
   return (
     <>
+      <Text>useRouter:</Text>
       <Buttons />
+      <Text>Links:</Text>
+      <Link href={"/boards"}>Link to /boards</Link>
+      <Link href={"/groups"}>Link to /groups</Link>
+      <Link href={"/"}>Link to /</Link>
       <DrawerContentScrollView
         {...rest}
         contentContainerStyle={drawerContentContainerStyle}
