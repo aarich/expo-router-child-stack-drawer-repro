@@ -8,3 +8,5 @@ To reproduce:
 6. Moving between `/stack1` and any other link _does_ work.
 
 Reproduced this behavior on both web and iOS.
+
+This is the reproduction repo for https://github.com/expo/expo/issues/33049
