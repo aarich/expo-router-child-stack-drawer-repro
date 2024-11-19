@@ -7,32 +7,8 @@ import { View } from "./Themed";
 import { Href, usePathname, useRouter } from "expo-router";
 import Buttons from "./Buttons";
 
-export default function EditScreenInfo({ path }: { path: string }) {
+export default function ScreenInfo({ path }: { path: string }) {
   const pathName = usePathname();
-  const router = useRouter();
-
-  const routes: Href[] = [
-    "/",
-    "/boards",
-    "/groups",
-    { pathname: "/(auth)/(stack)/groups" },
-  ];
-  const buttons: { label: string; onPress: VoidFunction }[] = [];
-  routes.forEach((route) => {
-    buttons.push({
-      label: "navigate to " + route,
-      onPress: () => router.navigate(route),
-    });
-    buttons.push({
-      label: "push to " + route,
-      onPress: () => router.push(route),
-    });
-    buttons.push({
-      label: "replace to " + route,
-      onPress: () => router.replace(route),
-    });
-  });
-
   return (
     <View>
       <View style={styles.getStartedContainer}>

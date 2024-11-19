@@ -8,8 +8,13 @@ export default function Buttons() {
 
   return (
     <View style={styles.container}>
-      <Button onPress={() => router.push("/boards")} title="/boards" />
-      <Button onPress={() => router.push("/groups")} title="/groups" />
+      <Button onPress={() => router.push("/stack1")} title="/stack1" />
+      {/* the following two ought to be identical */}
+      <Button
+        onPress={() => router.push("/(auth)/stack2")}
+        title="/(auth)/stack2"
+      />
+      <Button onPress={() => router.push("/stack2")} title="/stack2" />
       <Button onPress={() => router.push("/")} title="/" />
     </View>
   );
